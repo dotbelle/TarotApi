@@ -1,0 +1,6 @@
+@TarotApi_HostAddress = http://localhost:5023
+
+GET {{TarotApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
