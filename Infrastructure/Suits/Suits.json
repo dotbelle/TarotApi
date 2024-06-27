@@ -1,25 +1,22 @@
-{
-    "tarot_suits": [
-      {
-        "id": 1,
-        "suit": "Wands",
-        "description": "The suit of Wands represents creativity, passion, and energy. It is associated with action, ambition, and making plans for the future."
-      },
-      {
-        "id": 2,
-        "suit": "Cups",
-        "description": "The suit of Cups is related to emotions, relationships, and connections. It signifies love, intuition, and the depth of feelings."
-      },
-      {
-        "id": 3,
-        "suit": "Swords",
-        "description": "The suit of Swords symbolizes intellect, thoughts, and communication. It deals with challenges, conflicts, and the power of the mind."
-      },
-      {
-        "id": 4,
-        "suit": "Pentacles",
-        "description": "The suit of Pentacles represents material aspects, such as money, career, and possessions. It focuses on practicality, security, and the physical world."
-      }
-    ]
+[
+  {
+      "id": 1,
+      "name": "Wands",
+      "description": "The suit of Wands represents creativity, passion, and energy. It is associated with action, ambition, and making plans for the future."
+  },
+  {
+      "id": 2,
+      "name": "Cups",
+      "description": "The suit of Cups is related to emotions, relationships, and connections. It signifies love, intuition, and the depth of feelings."
+  },
+  {
+      "id": 3,
+      "name": "Swords",
+      "description": "The suit of Swords symbolizes intellect, thoughts, and communication. It deals with challenges, conflicts, and the power of the mind."
+  },
+  {
+      "id": 4,
+      "name": "Pentacles",
+      "description": "The suit of Pentacles represents material aspects, such as money, career, and possessions. It focuses on practicality, security, and the physical world."
   }
-  
+]
