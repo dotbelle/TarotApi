@@ -1,22 +1,30 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Infrastructure.Suits;
 
-internal class Suit {
+public class Suit
+{
+    [JsonPropertyName("id")]
     public int Id { get; set; }
-    public string? Name { get; set; }
-    public string? Description { get; set; }
+
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; }
 }
 
-internal class SuitParser
+public static class SuitParser
 {
-    public List<Suit> Parse()
+    public static List<Suit> Parse()
     {
-        var path = "./Suits.json";
-        var fileContent = File.ReadAllText(path);
+        var path = "/Users/maximilian/repos/Isabelle/TarotApi/Infrastructure/Suits/Suits.json";
 
-        var result = JsonSerializer.Deserialize<List<Suit>>(fileContent);
-        return result;
+        var jsonString = File.ReadAllText(path);
+
+        return JsonSerializer.Deserialize<List<Suit>>(jsonString);
+
     }
 
 }
