@@ -1,18 +1,16 @@
 namespace TarotApi.Suits;
 
-internal static class TarotApi
+public static class GetSuits
 {
-    public static RouteGroupBuilder MapSuits(this IEndpointRouteBuilder routes)
+    public static void MapGetSuits(this WebApplication app)
     {
-        var group = routes.MapGroup("/Suit");
-
-        group.WithTags("Suits");
-
-        group.MapGet("/{id}", async SuitQueryHandler => 
-        {
-
-        });
-
-        return group;
+        app.MapGet("/api/v{version:apiVersion}/suits",
+                async (GetSuitsQueryHandler handler) => Results.Ok(new ApiResponse<List<GetSuitsListResponse>>(await handler.Get(), Guid.NewGuid().ToString())))
+            .MapToApiVersion(1.0d)
+            .WithOpenApi()
+            .WithName("GetSuits")
+            .WithSummary("Get suits.")
+            .WithDescription("Get suits")
+            .ProducesCommonErrors();
     }
 }

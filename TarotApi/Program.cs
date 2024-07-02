@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
+using TarotApi.Configuration;
+using TarotApi.Suits;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,5 +19,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.AddApiEndpoints();
 
 app.Run();
